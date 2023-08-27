@@ -112,13 +112,25 @@
 //   )
 // }
 
+import { FormEvent } from "react";
+import homeForm from "./homeForm";
+
 
 function Home() {
+
   return (
-    <main>
-      <h1>
-        This is the Page's content.
-      </h1>
+    <main className="m-0 flex items-center justify-center w-[100vw] h-[100vh]">
+      <div>
+        <h1 className="">
+          Multi-university Transcript System
+        </h1>
+        <form onSubmit={onSubmit}>
+          <input type="email" name="name" id="email" />
+          <input type="password" name="name" />
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
+      <p>Don't have an account? <span>Sign up</span></p>
     </main>
   )
 }
