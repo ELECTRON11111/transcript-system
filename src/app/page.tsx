@@ -1,136 +1,84 @@
-// import Image from 'next/image'
-
-// export default function Home() {
-//   return (
-//     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-//       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-//         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-//           Get started by editing&nbsp;
-//           <code className="font-mono font-bold">src/app/page.tsx</code>
-//         </p>
-//         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-//           <a
-//             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-//             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             By{' '}
-//             <Image
-//               src="/vercel.svg"
-//               alt="Vercel Logo"
-//               className="dark:invert"
-//               width={100}
-//               height={24}
-//               priority
-//             />
-//           </a>
-//         </div>
-//       </div>
-
-//       <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-//         <Image
-//           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-//           src="/next.svg"
-//           alt="Next.js Logo"
-//           width={180}
-//           height={37}
-//           priority
-//         />
-//       </div>
-
-//       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-//         <a
-//           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Docs{' '}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Find in-depth information about Next.js features and API.
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Learn{' '}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Learn about Next.js in an interactive course with&nbsp;quizzes!
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Templates{' '}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Explore the Next.js 13 playground.
-//           </p>
-//         </a>
-
-//         <a
-//           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-//           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <h2 className={`mb-3 text-2xl font-semibold`}>
-//             Deploy{' '}
-//             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-//               -&gt;
-//             </span>
-//           </h2>
-//           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-//             Instantly deploy your Next.js site to a shareable URL with Vercel.
-//           </p>
-//         </a>
-//       </div>
-//     </main>
-//   )
-// }
-
 import { FormEvent } from "react";
-import homeForm from "./homeForm";
+// import { Montserrat } from 'next/font/google';
+import HomeForm from "./homeForm";
+import Image from "next/image";
+import logoWhite from "../../public/logo-white.png";
+import logoBlack from "../../public/logo-black.png";
 
+// const montserrat = Montserrat({subsets: ['latin']});
 
 function Home() {
 
   return (
-    <main className="m-0 flex items-center justify-center w-[100vw] h-[100vh]">
-      <div>
-        <h1 className="">
-          Multi-university Transcript System
-        </h1>
-        <form onSubmit={onSubmit}>
-          <input type="email" name="name" id="email" />
-          <input type="password" name="name" />
-          <button type="submit">Sign in</button>
-        </form>
+    <main className="m-0 flex items-center justify-center w-[100vw]  flex-col">
+      {/* Top banner */}
+      <div 
+        id="logo-navigations"
+        className={`flex absolute top-0 left-0 align-center justify-between p-5 w-full h-[17vh]`}
+      >
+        <Image 
+          src={logoWhite}
+          width={70}
+          height={70}
+          alt={"logo"}
+          className="mr-2"
+        />
+
+        <nav className="self-center ml-auto flex gap-5">
+          <a href="#sign-in">Sign In</a>
+          <a href="#sign-up">Sign Up</a>
+        </nav>
       </div>
-      <p>Don't have an account? <span>Sign up</span></p>
+
+      {/* Intro Section */}
+      <div id="intro" className="mt-[18vh] w-max-full">
+        <h1 className={""}>
+          Welcome to the Multi-University Transcript System.
+        </h1>
+        <p>Streamline Transcript Management Across Universities.</p>
+      </div>
+
+      {/* Sign in form */}
+      <HomeForm />
+      
+      {/* Footer Section */}
+      <div id="footer">
+        <h2>Developed by <span>Electron</span></h2>
+        <h4>© 2023</h4>
+
+        <div id="socials">
+          <a href="">Twitter</a>
+          <a href="">GitHub</a>
+          <a href="">LinkedIn</a>
+        </div>
+        {/* COnvert to Tailwind enabled styling */}
+        {/* <div style="margin-top:-23px">
+          <div class="bg-primary" style="margin-top:0px;height:23px"></div>
+          <div class="bg-primary" style="margin-top:1px;height:22px"></div>
+          <div class="bg-primary" style="margin-top:2px;height:21px"></div>
+          <div class="bg-primary" style="margin-top:3px;height:20px"></div>
+          <div class="bg-primary" style="margin-top:4px;height:19px"></div>
+          <div class="bg-primary" style="margin-top:5px;height:18px"></div>
+          <div class="bg-primary" style="margin-top:6px;height:17px"></div>
+          <div class="bg-primary" style="margin-top:7px;height:16px"></div>
+          <div class="bg-primary" style="margin-top:8px;height:15px"></div>
+          <div class="bg-primary" style="margin-top:9px;height:14px"></div>
+          <div class="bg-primary" style="margin-top:10px;height:13px"></div>
+          <div class="bg-primary" style="margin-top:11px;height:12px"></div>
+          <div class="bg-primary" style="margin-top:12px;height:11px"></div>
+          <div class="bg-primary" style="margin-top:13px;height:10px"></div>
+          <div class="bg-primary" style="margin-top:14px;height:9px"></div>
+          <div class="bg-primary" style="margin-top:15px;height:8px"></div>
+          <div class="bg-primary" style="margin-top:16px;height:7px"></div>
+          <div class="bg-primary" style="margin-top:17px;height:6px"></div>
+          <div class="bg-primary" style="margin-top:18px;height:5px"></div>
+          <div class="bg-primary" style="margin-top:19px;height:4px"></div>
+          <div class="bg-primary" style="margin-top:20px;height:3px"></div>
+          <div class="bg-primary" style="margin-top:21px;height:2px"></div>
+          <div class="bg-primary" style="margin-top:22px;height:1px"></div>
+          <div class="bg-primary" style="margin-top:23px;height:0px"></div>
+        </div> */}
+      </div>
     </main>
   )
 }

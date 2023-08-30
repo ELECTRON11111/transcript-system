@@ -1,6 +1,7 @@
 import { FormEvent } from "react";
+import Link from "next/link";
 
-export default function homeForm() {
+export default function HomeForm() {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
     
@@ -17,6 +18,21 @@ export default function homeForm() {
     }
     
     return (
-        
+      // <form onSubmit={onSubmit}>
+      // Let the form be like a card in the page
+      <form>
+        <h2>Log In to Account</h2>
+        <input 
+          className="my-10"
+          type="email" 
+          name="name" 
+          id="email" 
+        />
+        <br />
+        <input type="password" name="name" />
+        <button type="submit">Sign in</button>
+
+        <p>Don't have an account? <Link href={"/somewhere"}>Sign Up</Link> </p>
+      </form>
     )
-} 
+}
