@@ -2,61 +2,69 @@ import Link from "next/link"
 
 export default function About(): any {
     return (
-        <footer className="p-4 py-12 pb-4">
-            <h1 className="my-2 text-3xl">About Us.</h1>
-            <h2 className="text-purple-600 text-lg my-2">Our Mission</h2>
-            <p className="text-gray-700 my-6">
-                Our Mission is to enable academic institutions and students by offering a 
-                feature-rich platform for easy academic transcript management. Our ultimate
-                goal is to contribute to the global growth of education by improving academic 
-                record-keeping processes in terms of accessibility, transparency, and security.
-            </p>
+        <footer className="p-4 py-12 pb-4 md:grid md:grid-cols-3 md:gap-4">
+            <h1 className="my-2 text-3xl md:col-span-3 md:justify-self-center">About Us.</h1>
 
-            <h2 className="text-purple-600 text-lg my-2">Key Features</h2>
-            
-            <div id="list-items" className="my-2 text-gray-700">
-                <li className="li"> 
-                    <span id="title">Multi-University Support: </span>  
-                    Our system is designed to accommodate data from multiple universities, allowing
-                    students to access and manage their academic records regardless of the institution they attend.   
-                </li>
-                <li className="li"> 
-                    <span id="title">Customizable Typescripts: </span> 
-                    Universities have the flexibility to customize the format and content of their transcripts, ensuring
-                    that each institution's unique branding and policies are reflected accurately.
-                </li>
-                <li className="li"> 
-                    <span id="title">Secure Authentication: </span> 
-                    We prioritize the security of user data with robust authentication mechanisms, including options for 
-                    Google login, ensuring that only authorized individuals can access sensitive academic information.
-                </li> 
-                <li className="li">
-                    <span id="title">Efficient Data Management: </span> 
-                    With intuitive interfaces and powerful backend functionality, our system simplifies data management tasks for university administrators, saving time and resources.
-                </li>
+            <div id="mission">
+                <h2 className="text-purple-600 text-lg my-2">Our Mission</h2>
+                <p className="text-gray-700 my-6">
+                    Our Mission is to enable academic institutions and students by offering a 
+                    feature-rich platform for easy academic transcript management. Our ultimate
+                    goal is to contribute to the global growth of education by improving academic 
+                    record-keeping processes in terms of accessibility, transparency, and security.
+                </p>
             </div>
 
-            <h2 className="text-purple-600 text-lg my-4">Why Choose Us?</h2>
-            <p className="mb-4 li">
-                We prioritize user experience in every aspect of our platform, ensuring that both students and 
-                administrators find the system intuitive and easy to navigate. Our platform is built on robust infrastructure,
-                guaranteeing reliability and scalability.
-                We're continuously innovating and improving our platform to incorporate the latest technologies and best practices in academic record management.
-            </p>
+            <div id="key-features">
+                <h2 className="text-purple-600 text-lg my-2">Key Features</h2>
+                <div id="list-items" className="my-2 text-gray-700">
+                    <li className="li"> 
+                        <span id="title">Multi-University Support: </span>  
+                        Our system is designed to accommodate data from multiple universities, allowing
+                        students to access and manage their academic records regardless of the institution they attend.   
+                    </li>
+                    <li className="li"> 
+                        <span id="title">Customizable Typescripts: </span> 
+                        Universities have the flexibility to customize the format and content of their transcripts, ensuring
+                        that each institution's unique branding and policies are reflected accurately.
+                    </li>
+                    <li className="li md:hidden"> 
+                        <span id="title">Secure Authentication: </span> 
+                        We prioritize the security of user data with robust authentication mechanisms, including options for 
+                        Google login, ensuring that only authorized individuals can access sensitive academic information.
+                    </li> 
+                    <li className="li md:hidden">
+                        <span id="title">Efficient Data Management: </span> 
+                        With intuitive interfaces and powerful backend functionality, our system simplifies data management tasks for university administrators, saving time and resources.
+                    </li>
+                </div>
+            </div>
 
-            <h2 className="my-2 text-purple-600">Ready to get Started?</h2>
-            <p className="text-gray-700">
-                Sign Up today and contact us to elevate academic record-keeping at your institution.
-            </p>
+            <div id="why-choose-us" className="md:justify-self-center">
+                <h2 className="text-purple-600 text-lg my-4">Why Choose Us?</h2>
+                <p className="mb-4 li">
+                    We prioritize user experience in every aspect of our platform, ensuring that both students and 
+                    administrators find the system intuitive and easy to navigate. Our platform is built on robust infrastructure,
+                    guaranteeing reliability and scalability.
+                    We're continuously innovating and improving our platform to incorporate the latest technologies and best practices in academic record management.
+                </p>
+            </div>
 
-            <div id="phone" className="flex justify-around my-2">
+            <div id="ready">
+                <h2 className="my-2 text-purple-600">Ready to get Started?</h2>
+                <p className="text-gray-700">
+                    Sign Up today and contact us to elevate academic record-keeping at your institution.
+                </p>
+            </div>
+
+            <div id="phone" className="flex justify-around my-2 md:self-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                 </svg>
                 <span>+234 90909090909</span>
             </div>
 
-            <div id="links" className="flex justify-evenly my-4">
+            <div id="links" className="flex justify-evenly my-4 md:self-center">
                 <Link href={"#"}>
                     <svg width="30" height="30" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="bg-black text-black rounded hover:bg-purple-500">
                         <path d="M7 11.5H9.5L10.5 7.5H7V5.5C7 4.47 7 3.5 9 3.5H10.5V0.14C10.174 0.0970001 8.943 0 7.643 0C4.928 0 3 1.657 3 4.7V7.5H0V11.5H3V20H7V11.5Z" fill="#F8F8F8"/>
@@ -68,7 +76,7 @@ export default function About(): any {
                     </svg>
                 </Link>
 
-                <Link href={"#"}>
+                <Link href={"https://www.linkedin.com/in/opemipo-omoniyi11111/"}>
                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="bg-black text-black rounded transition duration-300 ease-out hover:bg-purple-500">
                         <path d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z" fill="#F8F8F8"/>
                     </svg>
@@ -81,7 +89,7 @@ export default function About(): any {
                 </Link>
             </div>
 
-            <h3 className="flex text-center justify-center mt-6">Copyright. 2024</h3>
+            <h3 className="flex text-center justify-center mt-6 md:col-span-3">Copyright. 2024</h3>
         </footer>
     )
 }
