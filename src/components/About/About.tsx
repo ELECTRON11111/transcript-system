@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function About(): any {
     return (
-        <footer className="p-4 py-12 pb-4 md:grid md:grid-cols-3 md:gap-4">
+        <footer id="about" className="p-4 py-12 pb-4 md:grid md:grid-cols-3 md:gap-4">
             <h1 className="my-2 text-3xl md:col-span-3 md:justify-self-center">About Us.</h1>
 
             <div id="mission">
