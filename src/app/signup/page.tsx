@@ -11,9 +11,10 @@ export default function signup():any {
         role: "",
         areTermsAgreed: false
     });
-    const [errorState, updateErrorState] = useState(true);
+
     const [emailErrorState, updateEmailErrorState] = useState(true);
     const [passwordErrorState, updatePasswordErrorState] = useState(true);
+    const [errorState, updateErrorState] = useState(emailErrorState || passwordErrorState);
 
     const submitHandler = (e:any) => {
         e.preventDefault();
@@ -26,14 +27,20 @@ export default function signup():any {
         } else {
             updateEmailErrorState(false);
         }
+
+        updateErrorState(emailErrorState && passwordErrorState)
     }
 
     const handleConfirmPassword = (e: any) => {
         if (e.target.value !== formData.password) {
             updatePasswordErrorState(true);
+        } else if (e.target.value == "") {
+            updatePasswordErrorState(true);
         } else {
             updatePasswordErrorState(false);
         }
+        
+        updateErrorState(emailErrorState && passwordErrorState)
     }
 
     const handleChange = (event: any) => {
@@ -78,7 +85,9 @@ export default function signup():any {
                     <span> I agree to the <Link href={"#"} className="font-light underline">terms and Conditions.</Link></span>
                 </div>
                 
-                <button type="submit" className={`${formData.areTermsAgreed? "opacity-100": "opacity-60"} my-4 p-2 w-full bg-purple-600 rounded text-white transition duration-300 ease-out hover:shadow-lg`} disabled={!formData.areTermsAgreed}>Submit</button>
+                <button type="submit" className={`${formData.areTermsAgreed && !errorState? "opacity-100": "opacity-60"} my-4 p-2 w-full bg-purple-600 rounded text-white transition duration-300 ease-out hover:shadow-lg`} disabled={!(formData.areTermsAgreed && !errorState)}>Submit</button>
+                
+                {errorState? <p className="text-md text-red-700">Error, Fill all form inputs.</p>: ""}
             </form>
 
             <p className="my-2 text-md">Already have an account? <Link href={"/#login"} className="font-light underline">   Log In</Link></p>
