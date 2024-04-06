@@ -1,8 +1,13 @@
 "use client";
 
+// import { GoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
+import jwt_decode, { jwtDecode } from "jwt-decode";
 import { useState } from "react";
 import React from "react";
 import Link from "next/link";
+import { headers } from 'next/headers';
+import axios from 'axios';
 
 
 export default function Login () {
@@ -12,6 +17,29 @@ export default function Login () {
         changeIsStudent(newState);
     }
     
+    // const login = useGoogleLogin({
+    //     onSuccess: tokenResponse => console.log(tokenResponse),
+    // });
+    
+    const login = useGoogleLogin({
+        onSuccess: async (response) => {
+            try {
+                const res = await axios.get(
+                    "https://www.googleapis.com/oauth2/v3/userinfo",
+                    {
+                        headers: {
+                            Authorization: `Bearer ${response.access_token}`,
+                        },
+                    }
+                );
+
+                console.log(res)
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    });
+
     return (
         <div id="login" className="w-full bg-white p-4 py-8 md:flex md:flex-col md:justify-center md:px-60 md:pb-16">
             <div id="head" className="my-8">
@@ -27,6 +55,32 @@ export default function Login () {
                 <input type="username" className="input" placeholder={`Enter ${isStudent? "Student": "Admin" } username`} />
                 <input type="password" className="input" placeholder="Password" />
                 <button type="submit" className="my-4 p-2 w-full bg-purple-600 rounded text-white transition duration-300 ease-out hover:shadow-lg">Submit</button>
+
+                {/* Google Sign In button */}
+                {/* <div className="g-signin2" data-onsuccess="onSignIn"></div> */}
+                {/* <GoogleLogin
+                    onSuccess={credentialResponse => {
+                        // Data recieved is encrypted
+                        console.log(credentialResponse);
+                        
+                        const token = credentialResponse.credential as string;
+
+                        const credentialResponseDecoded = jwtDecode(token);
+                        console.log(credentialResponseDecoded);
+
+                    }}
+                    onError={() => {
+                        console.log('Login Failed');
+                    }}
+                    useOneTap
+                /> */}
+                <div
+                    onClick={() => login()}
+                    className='my-4 p-2 w-full text-center bg-white cursor-pointer 
+                    rounded border-2 border-purple-600 text-purple-600 transition duration-300 ease-out hover:shadow-lg'
+                >
+                    Sign in with Google 🚀
+                </div>
             </form>
 
             <p className="my-2 text-md">Don't have an account? <Link href={"/signup"} className="font-light underline">   Sign Up</Link></p>
