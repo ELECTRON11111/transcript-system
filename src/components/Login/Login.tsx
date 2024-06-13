@@ -47,7 +47,7 @@ export default function Login () {
                 <h1 className="text-purple-600 md:text-center">Enter your Login details.</h1>
                 <div id="links" className="m-4 flex justify-around">
                     <span className={`border-b-2 p-2 cursor-pointer select-none ${isStudent? "border-b-purple-500": ""}`} onClick={() => changeIsStudent(true)}>Student</span>
-                    <span className={`border-b-2 p-2 cursor-pointer select-none ${!isStudent? "border-b-purple-500": ""}`} onClick={() => changeIsStudent(false)}>Admin (University)</span>
+                    <span className={`border-b-2 p-2 cursor-pointer select-none ${!isStudent? "border-b-purple-500": ""}`} onClick={() => changeIsStudent(false)}>Admin (Lecturer)</span>
                 </div>
             </div>
             

@@ -8,10 +8,10 @@ export default function About(): any {
             <div id="mission">
                 <h2 className="text-purple-600 text-lg my-2">Our Mission</h2>
                 <p className="text-gray-700 my-6">
-                    Our Mission is to enable academic institutions and students by offering a 
-                    feature-rich platform for easy academic transcript management. Our ultimate
-                    goal is to contribute to the global growth of education by improving academic 
-                    record-keeping processes in terms of accessibility, transparency, and security.
+                    Our Mission is to help academic institutions and students by offering a 
+                    feature-rich platform for easy academic attendance management. Our ultimate
+                    goal is to ease the stress of taking attendance within the institution while ensuring that only students within the classroom can 
+                    take attendance.
                 </p>
             </div>
 
@@ -21,17 +21,18 @@ export default function About(): any {
                     <li className="li"> 
                         <span id="title">Multi-University Support: </span>  
                         Our system is designed to accommodate data from multiple universities, allowing
-                        students to access and manage their academic records regardless of the institution they attend.   
+                        students to access and manage their attendance records regardless of the institution they attend.   
                     </li>
                     <li className="li"> 
-                        <span id="title">Customizable Typescripts: </span> 
-                        Universities have the flexibility to customize the format and content of their transcripts, ensuring
-                        that each institution's unique branding and policies are reflected accurately.
+                        <span id="title">Geofencing: </span> 
+                        This is the core of our solution. With geofencing we can ensure that only students within the classroom are allowed
+                        to take attendance for a class. The lecturer (admin) dictates the fence, that is the boundary of the classroom. Any 
+                        student outside this fence can not take attendance for the class.
                     </li>
                     <li className="li md:hidden"> 
                         <span id="title">Secure Authentication: </span> 
                         We prioritize the security of user data with robust authentication mechanisms, including options for 
-                        Google login, ensuring that only authorized individuals can access sensitive academic information.
+                        Google login, ensuring that only authorized individuals can access sensitive information.
                     </li> 
                     <li className="li md:hidden">
                         <span id="title">Efficient Data Management: </span> 
@@ -46,14 +47,14 @@ export default function About(): any {
                     We prioritize user experience in every aspect of our platform, ensuring that both students and 
                     administrators find the system intuitive and easy to navigate. Our platform is built on robust infrastructure,
                     guaranteeing reliability and scalability.
-                    We're continuously innovating and improving our platform to incorporate the latest technologies and best practices in academic record management.
+                    Our platform uses geofencing to ensure accurate and genuine attendance taking
                 </p>
             </div>
 
             <div id="ready">
                 <h2 className="my-2 text-purple-600">Ready to get Started?</h2>
                 <p className="text-gray-700">
-                    Sign Up today and contact us to elevate academic record-keeping at your institution.
+                    Sign Up today and contact us to elevate attendance record-keeping at your institution.
                 </p>
             </div>
 

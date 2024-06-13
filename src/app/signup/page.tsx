@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function signup():any {
     const [formData, updateFormData] = useState({
+        name: "",
         email: "",
         password: "",
         university: "",
@@ -18,7 +19,7 @@ export default function signup():any {
 
     const submitHandler = (e:any) => {
         e.preventDefault();
-        console.log("Form Submitted");
+        console.log("Form Submitted", formData);
     }
 
     const handleEmailError = (e: any) => {
@@ -59,12 +60,13 @@ export default function signup():any {
             <div id="head" className="my-8">
                 <h1 className="my-2 text-3xl md:text-center">Sign Up.</h1>
                 <h1 className="text-purple-600 md:text-center">
-                    Input the details of your institution <span className="hidden sm:inline">||</span><br className="sm:hidden"/> Create an admin account.
+                    Input your details <span className="hidden sm:inline">||</span><br className="sm:hidden"/> Create an admin/student account.
                 </h1>
             </div>
             
             <form action="#" className="flex flex-col justify-around" onSubmit={(e) => submitHandler(e)}>
-                <input type="email" name="email" className="input" onChange = {(e:any) => {handleChange(e); handleEmailError(e)}} placeholder={`Enter University email`} />
+                <input type="name" name="name" className="input" onChange = {(e:any) => {handleChange(e);}} placeholder={`Enter your full name`} />
+                <input type="email" name="email" className="input" onChange = {(e:any) => {handleChange(e); handleEmailError(e)}} placeholder={`Enter your email`} />
                 <input type="password" name="password" onChange = {(e) => {handleChange(e); handleConfirmPassword(e)}} className="input" placeholder="Enter Password" />
                 <input type="password" className="input" onChange = {(e) => handleConfirmPassword(e)} placeholder="Confirm Password" />
 
@@ -73,13 +75,11 @@ export default function signup():any {
                                 : <p className="text-green-700 text-sm">Passwords match, continue ..</p>
                 } 
 
-                <select name="university" defaultValue={"bellsTech"} onChange = {(e) => handleChange(e)} id="select_uni" className="input text-gray-400">
-                    <option value="bellsTech">Bells University of Technology</option>
-                    <option value="Redeemers">Redeemers University</option>
-                    <option value="Covenant">Covenant University</option>
+                <select name="role" defaultValue={"student"} onChange = {(e) => handleChange(e)} id="role" className="input text-gray-400">
+                    <option value="student">Student</option>
+                    <option value="lecturer">Lecturer (admin)</option>
                 </select>
 
-                <input type="text" name="role" id="role" onChange = {(e) => handleChange(e)} className="input" placeholder="What is your role in the university?"/>
                 <div id="terms_and_services" className="flex gap-2 items-baseline">
                     <input type="checkbox" onChange={(e) => {handleChange(e)}} name="areTermsAgreed" />
                     <span> I agree to the <Link href={"#"} className="font-light underline">terms and Conditions.</Link></span>

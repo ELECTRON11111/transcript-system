@@ -39,8 +39,8 @@ export default function Home(): any {
         <Navigation hidden = {NavHidden}/>
 
         <div id="body" className="p-4 mt-12 text-wrap text-center sm:pb-12 md:mt-18 md:p-4">
-          <h1 className="font-bold text-gray-700 text-4xl text-center my-4 select-none sm:text-white sm:px-6 sm:text-4xl md:text-6xl lg:text-7xl">Welcome to the Multi-university transcript system.</h1>
-          <span className="text-sm text-center font-light select-none md:text-lg md:shadow-2xl">streamline transcript management across universities.</span>
+          <h1 className="font-bold text-gray-700 text-4xl text-center my-4 select-none sm:text-white sm:px-6 sm:text-4xl md:text-6xl lg:text-7xl">Welcome to our classroom attendance system.</h1>
+          <span className="text-sm text-center font-light select-none md:text-lg md:shadow-2xl">streamline attendance management across universities.</span>
 
           <div id="btns" className="my-14 flex justify-center gap-4">
             <Link href={"/signup"} className="border-b-2 p-3 rounded text-md hover:border-b-purple-600 transition-all duration-300 ease-out select-none sm:hover:text-purple-500 md:text-lg md:border-2 md:hover:border-purple-500 md:px-5">
