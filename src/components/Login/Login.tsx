@@ -52,7 +52,7 @@ export default function Login () {
             </div>
             
             <form action="#" className="flex flex-col justify-around" onSubmit={(e) => e.preventDefault()}>
-                <input type="username" className="input" placeholder={`Enter ${isStudent? "Student": "Admin" } username`} />
+                <input type="username" className="input" placeholder={`Enter ${isStudent? "Student": "Admin" } email`} />
                 <input type="password" className="input" placeholder="Password" />
                 <button type="submit" className="my-4 p-2 w-full bg-purple-600 rounded text-white transition duration-300 ease-out hover:shadow-lg">Submit</button>
 
