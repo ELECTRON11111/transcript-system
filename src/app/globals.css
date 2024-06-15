@@ -15,3 +15,7 @@
 #title {
   @apply font-semibold
 }
+
+.hover-effect {
+  @apply transition duration-300 ease-out;
+}
