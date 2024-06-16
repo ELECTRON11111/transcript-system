@@ -56,24 +56,6 @@ export default function Login () {
                 <input type="password" className="input" placeholder="Password" />
                 <button type="submit" className="my-4 p-2 w-full bg-purple-600 rounded text-white transition duration-300 ease-out hover:shadow-lg">Submit</button>
 
-                {/* Google Sign In button */}
-                {/* <div className="g-signin2" data-onsuccess="onSignIn"></div> */}
-                {/* <GoogleLogin
-                    onSuccess={credentialResponse => {
-                        // Data recieved is encrypted
-                        console.log(credentialResponse);
-                        
-                        const token = credentialResponse.credential as string;
-
-                        const credentialResponseDecoded = jwtDecode(token);
-                        console.log(credentialResponseDecoded);
-
-                    }}
-                    onError={() => {
-                        console.log('Login Failed');
-                    }}
-                    useOneTap
-                /> */}
                 <div
                     onClick={() => login()}
                     className='my-4 p-2 w-full text-center bg-white cursor-pointer 
@@ -83,7 +65,7 @@ export default function Login () {
                 </div>
             </form>
 
-            <p className="my-2 text-md">Don't have an account? <Link href={"/signup"} className="font-light underline">   Sign Up</Link></p>
+            <p className="my-2 text-md">Don&apos;t have an account? <Link href={"/signup"} className="font-light underline">   Sign Up</Link></p>
         </div>
     )
 }
