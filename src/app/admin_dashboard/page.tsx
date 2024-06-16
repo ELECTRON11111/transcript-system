@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation/Navigation";
 import Modal from "@/components/Model/Model";
 
 
-export default function admin_dashboard() {
+export default function Admin_dashboard() {
     const [NavHidden, changeNavHidden] = useState(true);
     const [classStarted, updateClassStarted] = useState(false);
     const [code, updateCode] = useState("");
@@ -94,7 +94,7 @@ export default function admin_dashboard() {
                 {/* Input first name from backend */}
                 <h1 className="text-3xl font-bold">Hello there, <span className="text-purple-700 pl-1">{"Opemipo"}</span>.</h1>
 
-                <h3>You're an admin! don't know what to do?</h3>
+                <h3>You&apos;re an admin! don&apos;t know what to do?</h3>
 
                 <ul className="list-disc">
                     <li>Start a class.</li>
